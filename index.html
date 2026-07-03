@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yashraj Portfolio | AI Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700;800&family=Syne:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html { background: #050b14 !important; }
+        body { background: #050b14 !important; color: #e2e8f0 !important; }
+        html[data-theme="light"] { background: #f0f4f8 !important; }
+        html[data-theme="light"] body { background: #f0f4f8 !important; color: #0f172a !important; }
+        .navbar { position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; z-index: 9999 !important; }
+        @supports not (backdrop-filter: blur(1px)) {
+            .navbar { background: rgba(5, 11, 20, 0.98) !important; }
+        }
+    </style>
+    <script>
+        (function() {
+            var t = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+</head>
+<body>
+
+<canvas id="particles-canvas"></canvas>
+<div class="scanline-overlay"></div>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-inner">
+        <a href="#home" class="logo">
+            <span class="logo-bracket">[</span>YK<span class="logo-bracket">]</span>
+        </a>
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="#home" class="nav-link"><span class="nav-num">00.</span>HOME</a></li>
+            <li><a href="#about" class="nav-link"><span class="nav-num">01.</span>ABOUT</a></li>
+            <li><a href="#experience" class="nav-link"><span class="nav-num">02.</span>EXPERIENCE</a></li>
+            <li><a href="#projects" class="nav-link"><span class="nav-num">03.</span>PROJECTS</a></li>
+            <li><a href="#skills" class="nav-link"><span class="nav-num">04.</span>SKILLS</a></li>
+            <li><a href="#achievements" class="nav-link"><span class="nav-num">05.</span>WINS</a></li>
+            <li><a href="#contact" class="nav-link"><span class="nav-num">06.</span>CONTACT</a></li>
+        </ul>
+        <div class="nav-right">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-sun"></i>
+            </button>
+            <button class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-bg-text">AI</div>
+    <div class="container">
+        <div class="hero-layout">
+            <div class="hero-left">
+                <div class="hero-tag">
+                    <span class="tag-dot"></span>
+                    <span>AVAILABLE FOR INTERNSHIPS · 2026</span>
+                </div>
+                <h1 class="hero-name">
+                    <span class="name-line">YASHRAJ</span>
+                    <span class="name-line accent-line">KUMAR</span>
+                </h1>
+                <div class="hero-role">
+                    <span class="role-prefix">~/</span>
+                    <span class="typewriter" id="typewriter"></span><span class="cursor-blink">█</span>
+                </div>
+                <p class="hero-desc">
+                    Building intelligent systems with LLMs, multi-agent architectures, and RAG pipelines.
+                    3rd year ECE @ <strong>IIIT Nagpur</strong> · CGPA 7.80
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-primary">HIRE ME <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://drive.google.com/file/d/1ZZ_-6PyAyUOqU0-vpQSeHogLHJTth_O0/view?usp=sharing" target="_blank" class="btn-secondary"><i class="fas fa-download"></i> RESUME</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/Yashraj0906" target="_blank" class="social-chip"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://linkedin.com/in/yashraj-kumar-3b0673287" target="_blank" class="social-chip"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="mailto:yashrajworkk09@gmail.com" class="social-chip"><i class="fas fa-envelope"></i> Email</a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="photo-frame">
+                    <div class="orbit-ring ring-a"></div>
+                    <div class="orbit-ring ring-b"></div>
+                    <img src="Yashraj.jpeg" alt="Yashraj Kumar" class="profile-photo" />
+                    <div class="photo-badge">
+                        <i class="fas fa-brain"></i>
+                        <span>AI Engineer</span>
+                    </div>
+                    <div class="photo-corner tl"></div>
+                    <div class="photo-corner tr"></div>
+                    <div class="photo-corner bl"></div>
+                    <div class="photo-corner br"></div>
+                </div>
+                <div class="tech-float-tags">
+                    <span class="ftag" style="top:10%;left:-50px">LangGraph</span>
+                    <span class="ftag" style="top:42%;right:-60px">FastAPI · RAG</span>
+                    <span class="ftag" style="bottom:18%;left:-30px">Groq · Docker</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <span>SCROLL</span>
+        <div class="scroll-line"></div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+    <div class="container">
+        <div class="sec-header">
+            <span class="sec-tag">// 01</span>
+            <h2 class="sec-title">ABOUT</h2>
+            <div class="sec-line"></div>
+        </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>ECE student pivoting hard into <strong class="hl">Generative AI & ML Systems</strong>. I build end-to-end intelligent pipelines — from fine-tuning 7B models with LoRA/PEFT to orchestrating multi-agent networks with LangGraph.</p>
+                <p>My engineering background gives me a unique edge: I understand hardware constraints, signal processing, and system design — making me better at building <strong class="hl">efficient, production-ready AI</strong> rather than just research prototypes.</p>
+                <p>Currently targeting <strong class="hl">AI/ML internships</strong> and programs like Amazon ML Summer School. I thrive in hackathon environments and open-source collaboration.</p>
+            </div>
+            <div class="about-cards">
+                <div class="acard">
+                    <i class="fas fa-graduation-cap acard-icon"></i>
+                    <div>
+                        <div class="acard-title">IIIT Nagpur</div>
+                        <div class="acard-sub">B.Tech ECE · Expected 2027</div>
+                        <div class="acard-sub">CGPA: 7.80 / 10</div>
+                    </div>
+                </div>
+                <div class="acard">
+                    <i class="fas fa-certificate acard-icon"></i>
+                    <div>
+                        <div class="acard-title">Generative AI Course</div>
+                        <div class="acard-sub">LangChain & HuggingFace · Udemy</div>
+                    </div>
+                </div>
+                <div class="acard">
+                    <i class="fas fa-map-marker-alt acard-icon"></i>
+                    <div>
+                        <div class="acard-title">Nagpur, India</div>
+                        <div class="acard-sub">Open to remote & relocation</div>
+                    </div>
+                </div>
+                <div class="acard">
+                    <i class="fas fa-code-branch acard-icon"></i>
+                    <div>
+                        <div class="acard-title">Interests</div>
+                        <div class="acard-sub">Agentic AI · LLMOps · RAG · NLP</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section experience" id="experience">
+    <div class="container">
+        <div class="sec-header">
+            <span class="sec-tag">// 02</span>
+            <h2 class="sec-title">EXPERIENCE</h2>
+            <div class="sec-line"></div>
+        </div>
+        <div class="experience-timeline">
+            <div class="exp-card">
+                <div class="exp-glow"></div>
+                <div class="exp-header">
+                    <div class="exp-company-info">
+                        <div class="exp-icon"><i class="fas fa-building"></i></div>
+                        <div>
+                            <h3 class="exp-company">YellowSense Technologies</h3>
+                            <p class="exp-role">AI/ML Intern · Remote</p>
+                        </div>
+                    </div>
+                    <span class="exp-date"><i class="fas fa-calendar-alt"></i> Mar 2026 – Apr 2026</span>
+                </div>
+                <div class="exp-body">
+                    <ul class="exp-highlights">
+                        <li><span class="exp-bullet">▹</span>Architected a <strong>7-layer liveness detection system</strong> (FastAPI + Flutter) for contactless fingerprint capture using MediaPipe, OpenCV, HSV skin detection, and LBP texture analysis.</li>
+                        <li><span class="exp-bullet">▹</span>Designed anti-spoofing checks to block fake fingerprints (silicone, latex, AI-generated) via reflection and ridge frequency analysis, achieving <strong>100% spoof rejection rate</strong>.</li>
+                    </ul>
+                    <div class="exp-tech">
+                        <span>FastAPI</span><span>Flutter</span><span>MediaPipe</span><span>OpenCV</span><span>Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section projects" id="projects">
+    <div class="container">
+        <div class="sec-header">
+            <span class="sec-tag">// 03</span>
+            <h2 class="sec-title">PROJECTS</h2>
+            <div class="sec-line"></div>
+        </div>
+        <div class="projects-grid">
+
+            <!-- CodeSentinel AI — featured full width, clickable -->
+            <a class="proj-card featured" href="https://github.com/Yashraj0906/codesentinel-ai" target="_blank">
+                <div class="proj-glow"></div>
+                <div class="proj-top">
+                    <span class="proj-num">01</span>
+                    <span class="gh-label"><i class="fab fa-github"></i> View on GitHub →</span>
+                </div>
+                <h3 class="proj-title">CodeSentinel AI</h3>
+                <p class="proj-sub">Developer Intelligence Platform</p>
+                <p class="proj-desc">AI code review platform with a 6-stage pipeline: static bug detection, LLM deep analysis, RAG security scanning against CWE database, auto-fix generation, and a self-healing test loop. Codebase onboarding module lets new devs ask natural language questions about any GitHub repo using AST chunking & call graph traversal.</p>
+                <div class="proj-metrics">
+                    <span class="metric"><i class="fas fa-shield-alt"></i> F1 = 1.0 Security</span>
+                    <span class="metric"><i class="fas fa-server"></i> 4 API Endpoints</span>
+                    <span class="metric"><i class="fas fa-docker"></i> 5 Docker Services</span>
+                </div>
+                <div class="proj-tags">
+                    <span>Python</span><span>FastAPI</span><span>Groq</span><span>Qdrant</span><span>Redis</span><span>RAG</span><span>Docker</span>
+                </div>
+            </a>
+
+            <!-- AI Mock Interview Coach -->
+            <a class="proj-card" href="https://github.com/Yashraj0906/ai_mock_interview_coach" target="_blank">
+                <div class="proj-glow"></div>
+                <div class="proj-top">
+                    <span class="proj-num">02</span>
+                    <span class="gh-label"><i class="fab fa-github"></i> GitHub →</span>
+                </div>
+                <h3 class="proj-title">AI Mock Interview Coach</h3>
+                <p class="proj-sub">Multi-Agent Interview Preparation System</p>
+                <p class="proj-desc">AI mock interview system with LangGraph, coordinating 4 specialized agents (planner, question generator, evaluator, feedback) via a stateful execution graph. RAG pipeline with conversational memory for multi-turn context retention and progressive difficulty scaling.</p>
+                <div class="proj-metrics">
+                    <span class="metric"><i class="fas fa-brain"></i> 4 Agents Orchestrated</span>
+                    <span class="metric"><i class="fas fa-bolt"></i> Reports in <5s</span>
+                    <span class="metric"><i class="fas fa-list-alt"></i> 6 Interview Categories</span>
+                </div>
+                <div class="proj-tags">
+                    <span>LangGraph</span><span>LangChain</span><span>Groq</span><span>ChromaDB</span><span>Streamlit</span><span>RAG</span>
+                </div>
+            </a>
+
+            <!-- YashGPT — updated -->
+            <a class="proj-card" href="https://github.com/Yashraj0906/YashGPT" target="_blank">
+                <div class="proj-glow"></div>
+                <div class="proj-top">
+                    <span class="proj-num">03</span>
+                    <span class="gh-label"><i class="fab fa-github"></i> GitHub →</span>
+                </div>
+                <h3 class="proj-title">YashGPT</h3>
+                <p class="proj-sub">Fine-tuned LLM for Data Science Consulting</p>
+                <p class="proj-desc">Fine-tuned Mistral-7B-Instruct (GPTQ) via LoRA (PEFT) on a custom dataset, training only 0.79% of parameters (2.1M of 264M). Optimized via gradient checkpointing and k-bit quantization; deployed to Hugging Face Hub.</p>
+                <div class="proj-metrics">
+                    <span class="metric"><i class="fas fa-arrow-down"></i> 63% loss reduction</span>
+                    <span class="metric"><i class="fas fa-microchip"></i> 7B param model</span>
+                    <span class="metric"><i class="fas fa-rocket"></i> Deployed on HF Hub</span>
+                </div>
+                <div class="proj-tags">
+                    <span>Mistral-7B</span><span>LoRA</span><span>PEFT</span><span>PyTorch</span><span>HuggingFace</span>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section skills" id="skills">
+    <div class="container">
+        <div class="sec-header">
+            <span class="sec-tag">// 04</span>
+            <h2 class="sec-title">TECH STACK</h2>
+            <div class="sec-line"></div>
+        </div>
+        <div class="skills-wrapper">
+            <div class="skill-group">
+                <h4 class="sg-title"><i class="fas fa-code"></i> LANGUAGES</h4>
+                <div class="skill-pills">
+                    <span>Python</span><span>C/C++</span><span>SQL</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h4 class="sg-title"><i class="fas fa-brain"></i> AI / ML / GenAI</h4>
+                <div class="skill-pills">
+                    <span>PyTorch</span><span>TensorFlow</span><span>LangChain</span><span>LangGraph</span><span>LangSmith</span><span>HuggingFace</span><span>Groq</span><span>Tavily</span><span>Ollama</span><span>RAG</span><span>LoRA/PEFT</span><span>Prompt Eng.</span><span>Agentic AI</span><span>Sentence Transformers</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h4 class="sg-title"><i class="fas fa-database"></i> DATA SCIENCE</h4>
+                <div class="skill-pills">
+                    <span>Pandas</span><span>NumPy</span><span>Scikit-learn</span><span>Matplotlib</span><span>Seaborn</span><span>OpenCV</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h4 class="sg-title"><i class="fas fa-tools"></i> TOOLS & PLATFORMS</h4>
+                <div class="skill-pills">
+                    <span>Git/GitHub</span><span>Streamlit</span><span>FastAPI</span><span>Qdrant</span><span>ChromaDB</span><span>Redis</span><span>Docker</span><span>Docker Compose</span><span>HuggingFace Hub</span><span>REST APIs</span><span>Webhooks</span><span>Jupyter</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section class="section achievements" id="achievements">
+    <div class="container">
+        <div class="sec-header">
+            <span class="sec-tag">// 05</span>
+            <h2 class="sec-title">WINS</h2>
+            <div class="sec-line"></div>
+        </div>
+        <div class="ach-grid">
+            <div class="ach-card">
+                <div class="ach-badge">🥉 3rd</div>
+                <h3>Azeotropy ML Hackathon</h3>
+                <p>Built a predictive model for virus infection rates (Ebola). Competing at <strong>IIT Bombay</strong> against top teams nationally.</p>
+                <span class="ach-year">2026</span>
+            </div>
+            <div class="ach-card">
+                <div class="ach-badge">🏅 Top 5</div>
+                <h3>Predict2Protect</h3>
+                <p>Data-driven <strong>corporate bankruptcy prediction</strong> model. ML Hackathon by DMS, IIT (ISM) Dhanbad.</p>
+                <span class="ach-year">2026</span>
+            </div>
+            <div class="ach-card">
+                <div class="ach-badge">📜 Cert</div>
+                <h3>Complete GenAI Course</h3>
+                <p>LangChain & HuggingFace — Udemy. Covers advanced LLM pipelines, agents, and deployment strategies.</p>
+                <span class="ach-year">2026</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+    <div class="container">
+        <div class="sec-header">
+            <span class="sec-tag">// 06</span>
+            <h2 class="sec-title">CONTACT</h2>
+            <div class="sec-line"></div>
+        </div>
+        <div class="contact-layout">
+            <div class="contact-left">
+                <h3 class="contact-cta">Let's build something <span class="hl">intelligent</span> together.</h3>
+                <p>Open to AI/ML internships, research collaborations, and hackathon teams. Currently targeting Summer 2026 roles.</p>
+                <div class="contact-links">
+                    <a href="mailto:yashrajworkk09@gmail.com" class="clink"><i class="fas fa-envelope"></i>yashrajworkk09@gmail.com</a>
+                    <a href="tel:+919420255192" class="clink"><i class="fas fa-phone"></i>+91 9420255192</a>
+                    <a href="https://github.com/Yashraj0906" target="_blank" class="clink"><i class="fab fa-github"></i>@Yashraj0906</a>
+                    <a href="https://linkedin.com/in/yashraj-kumar-3b0673287" target="_blank" class="clink"><i class="fab fa-linkedin"></i>yashraj-kumar-3b0673287</a>
+                </div>
+            </div>
+            <form class="contact-form" id="contact-form">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label>NAME</label>
+                        <input type="text" id="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-field">
+                        <label>EMAIL</label>
+                        <input type="email" id="email" placeholder="your@email.com" required>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label>MESSAGE</label>
+                    <textarea id="message" placeholder="What are you building?" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary full-w">SEND MESSAGE <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <span class="footer-logo">[YK]</span>
+            <span class="footer-copy">© 2026 Yashraj Kumar · Built with 🤖 & ☕</span>
+            <div class="footer-socials">
+                <a href="https://github.com/Yashraj0906" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/yashraj-kumar-3b0673287" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
